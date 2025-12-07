@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Game Tebak Angka</h2>
+
+<input type="number" id="tebakan" placeholder="Masukkan angka 1–10">
+<button onclick="cekTebakan()">Coba!</button>
+<button onclick="resetGame()">Reset</button>
+
+<p id="hasil"></p>
+
+<script>
+let angkaBenar = Math.floor(Math.random() * 10) + 1;
+
+function cekTebakan() {
+  let tebakan = parseInt(document.getElementById("tebakan").value);
+  let pesan = "";
+
+  // Validasi input (fitur tambahan)
+  if (isNaN(tebakan) || tebakan < 1 || tebakan > 10) {
+    pesan = "Masukkan angka antara 1–10!";
+  }
+  else if (tebakan === angkaBenar) {
+    pesan = "Tebakan kamu BENAR! ✔";
+  } else {
+    pesan = "Salah, coba lagi!";
+  }
+
+  document.getElementById("hasil").innerHTML = pesan;
+}
+
+// Fitur tambahan: Reset game
+function resetGame() {
+  angkaBenar = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("tebakan").value = "";
+  document.getElementById("hasil").innerHTML = "Game telah di-reset!";
+}
+  /*
+**Tantangan terbesar:**
+
+* Menyusun logika tebak angka.
+* Membuat validasi input.
+* Menghubungkan HTML dengan JavaScript.
+* Mengatur angka acak dan reset game.
+
+**Fitur tambahan jika ada waktu:**
+
+* Hint (lebih besar/kecil).
+* Skor atau nyawa.
+* Tampilan lebih menarik.
+* Riwayat tebakan.*/
+</script>
+
+</body>
+</html>

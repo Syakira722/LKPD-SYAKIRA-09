@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Fungsi</title>
+</head>
+<body>
+    <script>
+        // 1. Fungsi hitung luas persegi
+        function hitungLuasPersegi(sisi) {
+            return sisi * sisi;
+        }
+
+        let sisi = parseInt(prompt("Masukkan panjang sisi persegi:"));
+        let luas = hitungLuasPersegi(sisi);
+        document.write("Luas persegi dengan sisi " + sisi + " adalah: " + luas + "<br>");
+
+        // 2. Fungsi menyapa nama
+        function sapa(nama) {
+            document.write("Halo " + nama + ", selamat belajar JavaScript!<br>");
+        }
+
+        let namaInput = prompt("Siapa nama kamu?");
+        sapa(namaInput);
+    /*Fungsi membuat kode lebih efisien karena:
+Menghindari penulisan berulang (kode cukup ditulis sekali, bisa dipanggil berkali-kali)
+Mempermudah perbaikan (jika ada kesalahan, cukup perbaiki di dalam fungsi saja)
+Membuat kode lebih rapi dan terstruktur
+Memudahkan pembacaan dan kerja tim
+Dapat digunakan kembali untuk berbagai kebutuhan (reusable).
+    Parameter adalah nilai yang kamu kirimkan ke dalam fungsi saat memanggilnya.
+Contohnya ketika kamu punya fungsi menghitung luas, kamu mengirim angka sisi sebagai parameter.
+    Sedangkan return adalah nilai yang dikeluarkan atau dikembalikan oleh fungsi setelah fungsi itu selesai menghitung atau memproses sesuatu.*/
+    </script>
+</body>
+</html>

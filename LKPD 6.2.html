@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Daftar Item</h3>
+<div id="kontainer"></div>
+
+<button onclick="tambahElemen()">Tambah Elemen</button>
+
+<script>
+function tambahElemen() {
+    let elemenBaru = document.createElement("p");
+    elemenBaru.innerHTML = "Ini elemen baru yang ditambahkan!";
+    document.getElementById("kontainer").appendChild(elemenBaru);
+}
+    /*Bagaimana cara menambah elemen baru ke halaman?
+Ada dua langkah utama:
+a. Membuat elemen baru
+Gunakan document.createElement()
+b. Menambahkannya ke halaman
+Menggunakan appendChild() atau append().*/
+</script>
+
+</body>
+</html>
